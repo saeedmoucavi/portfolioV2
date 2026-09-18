@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" width="640" height="800">
+  <defs>
+    <pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#4A90B8" stroke-opacity=".18" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="800" fill="#151A21"/>
+  <rect width="640" height="800" fill="url(#g)"/>
+  <circle cx="320" cy="300" r="112" fill="none" stroke="#4A90B8" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M148 620c0-95 77-172 172-172s172 77 172 172" fill="none" stroke="#4A90B8" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M320 188v-40M320 452v40M208 300h-46M478 300h46" stroke="#F2A33C" stroke-opacity=".5" stroke-width="1.5"/>
+  <g fill="#98A3B2" font-family="monospace" font-size="17" text-anchor="middle">
+    <text x="320" y="700">YOUR PHOTO GOES HERE</text>
+    <text x="320" y="728" font-size="13" fill="#5F6B7C">Replace assets/images/portrait-placeholder.svg</text>
+    <text x="320" y="748" font-size="13" fill="#5F6B7C">Recommended: 800 x 1000 px, portrait, JPG</text>
+  </g>
+  <g stroke="#F2A33C" stroke-width="2" fill="none">
+    <path d="M20 44V20h24M596 20h24v24M620 756v24h-24M44 780H20v-24"/>
+  </g>
+</svg>

@@ -1,0 +1,755 @@
+# =============================================================================
+#  VISUAL EDITOR SETTINGS  (GitHub Pages version)
+#  This file tells the editor at yoursite.com/admin which boxes to show you.
+#
+#  You must fill in TWO things below before /admin will work. Both are explained
+#  step by step in  راهنمای-گیت‌هاب-پیجز.md :
+#    1. repo:      your GitHub username + "/" + your repository name
+#    2. base_url:  the address of your free Cloudflare login helper
+# =============================================================================
+
+backend:
+  name: github
+  repo: saeedmoucavi/portfolio                       # your GitHub username / repo
+  branch: main
+  base_url: https://portfolio-login.saeedmoucavi.workers.dev   # your Cloudflare login helper
+  # auth_endpoint: auth   # (default — leave commented unless the guide says otherwise)
+
+# Saves go straight to the live site. Change to "editorial_workflow" if you
+# would rather every edit wait as a draft until you approve it.
+publish_mode: simple
+
+# Where uploaded pictures are stored, and the path written into content.json.
+media_folder: "assets/images"
+public_folder: "assets/images"
+
+locale: en
+site_url: /
+logo_url: /favicon.svg
+
+collections:
+  - name: "content"
+    label: "My Website"
+    files:
+
+      # =====================================================================
+      #  1. SITE SETTINGS
+      # =====================================================================
+      - name: "site"
+        label: "Website content"
+        file: "content.json"
+        description: "Everything on your website. Open a panel, change the text, press Publish."
+        fields:
+          # Kept out of sight so the editor never damages the notes in content.json.
+          - { name: "_README", widget: "hidden", required: false, label: "Notes" }
+
+          - name: "site"
+            label: "Basic settings"
+            widget: "object"
+            fields:
+              - { name: "brandInitials", label: "Logo initials (top left)", widget: "string" }
+              - { name: "defaultLanguage", label: "Language shown first", widget: "select", options: ["en", "fa"] }
+              - { name: "showLanguageToggle", label: "Show the EN / FA switch", widget: "boolean" }
+              - name: "pageTitle"
+                label: "Browser tab title"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "metaDescription"
+                label: "Google search description (1 sentence)"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - { name: "siteUrl", label: "Your web address", widget: "string", required: false }
+              - { name: "ogImage", label: "Sharing preview image", widget: "image", required: false }
+
+          - name: "theme"
+            label: "Colours & fonts"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { name: "colorBackground",   label: "Page background",       widget: "color" }
+              - { name: "colorSurface",      label: "Alternate band colour", widget: "color" }
+              - { name: "colorSurfaceRaised",label: "Card background",       widget: "color" }
+              - { name: "colorBorder",       label: "Lines & borders",       widget: "color" }
+              - { name: "colorText",         label: "Main text",             widget: "color" }
+              - { name: "colorTextMuted",    label: "Secondary text",        widget: "color" }
+              - { name: "colorAccent",       label: "Highlight colour",      widget: "color" }
+              - { name: "colorAccentInk",    label: "Text on highlight",     widget: "color" }
+              - { name: "colorBlueprint",    label: "Blueprint line colour", widget: "color" }
+              - { name: "fontDisplay",       label: "Heading font",          widget: "string" }
+              - { name: "fontBody",          label: "Body font",             widget: "string" }
+              - { name: "fontMono",          label: "Technical label font",  widget: "string" }
+              - { name: "cornerRadius",      label: "Corner roundness",      widget: "string" }
+              - { name: "showBlueprintGrid", label: "Show blueprint grid",   widget: "boolean" }
+              - { name: "enableAnimations",  label: "Enable animations",     widget: "boolean" }
+
+          - name: "sections"
+            label: "Sections — drag to reorder, untick to hide"
+            widget: "list"
+            collapsed: false
+            fields:
+              - { name: "key", label: "Section (do not change)", widget: "string" }
+              - { name: "enabled", label: "Show this section", widget: "boolean" }
+              - { name: "showInNav", label: "Show in the top menu", widget: "boolean" }
+              - name: "navLabel"
+                label: "Menu label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+
+      # =====================================================================
+      #  2. HERO + STATS
+      # =====================================================================
+          - name: "hero"
+            label: "Top of the page"
+            widget: "object"
+            fields:
+              - name: "eyebrow"
+                label: "Small line above your name"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "name"
+                label: "Your name"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "headline"
+                label: "Big statement"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "intro"
+                label: "Short introduction"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "primaryButtonLabel"
+                label: "Main button text"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - { name: "primaryButtonLink", label: "Main button link", widget: "string" }
+              - name: "secondaryButtonLabel"
+                label: "Second button text"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - { name: "secondaryButtonLink", label: "Second button link (your CV file)", widget: "file" }
+              - { name: "photo", label: "Your photo", widget: "image" }
+              - name: "photoAlt"
+                label: "Photo description (for screen readers)"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "photoCaption"
+                label: "Small caption under the photo"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "scrollHint"
+                label: "'Scroll' hint text"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+
+          - name: "stats"
+            label: "Headline numbers"
+            widget: "object"
+            fields:
+              - { name: "enabled", label: "Show this strip", widget: "boolean" }
+              - name: "items"
+                label: "Numbers"
+                widget: "list"
+                fields:
+                  - { name: "value", label: "Number", widget: "string" }
+                  - { name: "suffix", label: "Symbol after it (+, %)", widget: "string", required: false }
+                  - name: "label"
+                    label: "What it means"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+
+      # =====================================================================
+      #  3. ABOUT
+      # =====================================================================
+          - name: "about"
+            label: "About me"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "paragraphs"
+                label: "Paragraphs — add, remove or drag to reorder"
+                widget: "list"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "specSheetTitle"
+                label: "Side panel title"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "specs"
+                label: "Side panel rows"
+                widget: "list"
+                fields:
+                  - name: "label"
+                    label: "Row name"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "value"
+                    label: "Row value"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+
+      # =====================================================================
+      #  4. SKILLS
+      # =====================================================================
+          - name: "skills"
+            label: "Skills"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "categories"
+                label: "Skill groups — drag to reorder"
+                widget: "list"
+                fields:
+                  - { name: "enabled", label: "Show this group", widget: "boolean", required: false, default: true }
+                  - name: "icon"
+                    label: "Icon"
+                    widget: "select"
+                    options: ["drafting", "analysis", "manufacturing", "automation", "cog"]
+                  - name: "title"
+                    label: "Group name"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "description"
+                    label: "One-line description"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "skills"
+                    label: "Skills in this group"
+                    widget: "list"
+                    fields:
+                      - { name: "name", label: "Skill / software name", widget: "string" }
+                      - { name: "level", label: "Level 0–100", widget: "number", value_type: "int", min: 0, max: 100 }
+
+      # =====================================================================
+      #  5. PROJECTS
+      # =====================================================================
+          - name: "projects"
+            label: "Projects"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - { name: "showFilters", label: "Show category filter buttons", widget: "boolean" }
+              - name: "allFilterLabel"
+                label: "'All' button text"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+
+              - name: "detailLabels"
+                label: "Wording used inside a project (rarely changed)"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - name: "problem"
+                    widget: "object"
+                    label: "'The Challenge'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "solution"
+                    widget: "object"
+                    label: "'My Approach'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "role"
+                    widget: "object"
+                    label: "'My Role'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "tools"
+                    widget: "object"
+                    label: "'Tools Used'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "outcome"
+                    widget: "object"
+                    label: "'Outcome'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "specs"
+                    widget: "object"
+                    label: "'Specifications'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "gallery"
+                    widget: "object"
+                    label: "'Gallery'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "viewMore"
+                    widget: "object"
+                    label: "'View project'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "close"
+                    widget: "object"
+                    label: "'Close'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+
+              - name: "items"
+                label: "My projects — click + to add one, drag to reorder"
+                label_singular: "project"
+                widget: "list"
+                summary: "{{fields.code}} — {{fields.title.en}}"
+                collapsed: true
+                fields:
+                  - { name: "id", label: "Internal id (any unique word)", widget: "string" }
+                  - { name: "enabled", label: "Show this project", widget: "boolean", default: true }
+                  - { name: "code", label: "Project code (e.g. PRJ-05)", widget: "string" }
+                  - { name: "year", label: "Year", widget: "string" }
+                  - name: "title"
+                    label: "Project title"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  # --- IMAGES: right under the title so they are easy to find ---
+                  - { name: "cover", label: "📷 Cover image (the photo on the project card)", widget: "image" }
+                  - name: "gallery"
+                    label: "📷 Photo gallery (the images shown inside the project)"
+                    label_singular: "picture"
+                    widget: "list"
+                    summary: "{{fields.caption.en}}"
+                    fields:
+                      - { name: "image", label: "Picture — click to upload / replace", widget: "image" }
+                      - name: "caption"
+                        label: "Caption under the picture"
+                        widget: "object"
+                        fields:
+                          - { name: "en", label: "English", widget: "string" }
+                          - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "category"
+                    label: "Category (creates the filter buttons)"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "client"
+                    label: "Client"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "summary"
+                    label: "One-sentence summary (shown on the card)"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "problem"
+                    label: "The challenge"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "solution"
+                    label: "My approach"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "role"
+                    label: "My role"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "outcome"
+                    label: "Outcome / result"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - { name: "tools", label: "Tools used", widget: "list", field: { name: "tool", label: "Tool", widget: "string" } }
+                  - name: "specs"
+                    label: "Specification rows"
+                    widget: "list"
+                    required: false
+                    fields:
+                      - name: "label"
+                        label: "Name"
+                        widget: "object"
+                        fields:
+                          - { name: "en", label: "English", widget: "string" }
+                          - { name: "fa", label: "Persian", widget: "string" }
+                      - name: "value"
+                        label: "Value"
+                        widget: "object"
+                        fields:
+                          - { name: "en", label: "English", widget: "string" }
+                          - { name: "fa", label: "Persian", widget: "string" }
+
+      # =====================================================================
+      #  6. EXPERIENCE
+      # =====================================================================
+          - name: "experience"
+            label: "Work experience"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "items"
+                label: "Jobs — newest first"
+                label_singular: "job"
+                widget: "list"
+                summary: "{{fields.role.en}} — {{fields.company.en}}"
+                collapsed: true
+                fields:
+                  - { name: "enabled", label: "Show this job", widget: "boolean", default: true }
+                  - { name: "current", label: "This is my current job", widget: "boolean", default: false }
+                  - name: "role"
+                    label: "Job title"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "company"
+                    label: "Company"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "location"
+                    label: "Location"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "period"
+                    label: "Dates"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "points"
+                    label: "Bullet points"
+                    widget: "list"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+
+      # =====================================================================
+      #  7. EDUCATION & CERTIFICATIONS
+      # =====================================================================
+          - name: "education"
+            label: "Education & certificates"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "educationTitle"
+                label: "Left column title"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "certificationsTitle"
+                label: "Right column title"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "degrees"
+                label: "Degrees"
+                label_singular: "degree"
+                widget: "list"
+                summary: "{{fields.degree.en}}"
+                collapsed: true
+                fields:
+                  - { name: "enabled", label: "Show", widget: "boolean", default: true }
+                  - name: "degree"
+                    label: "Degree"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "school"
+                    label: "University"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "period"
+                    label: "Years"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "note"
+                    label: "Extra note (optional)"
+                    widget: "object"
+                    required: false
+                    fields:
+                      - { name: "en", label: "English", widget: "text", required: false }
+                      - { name: "fa", label: "Persian", widget: "text", required: false }
+              - name: "certifications"
+                label: "Certificates"
+                label_singular: "certificate"
+                widget: "list"
+                summary: "{{fields.title.en}}"
+                collapsed: true
+                fields:
+                  - { name: "enabled", label: "Show", widget: "boolean", default: true }
+                  - { name: "year", label: "Year", widget: "string" }
+                  - name: "title"
+                    label: "Certificate name"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "issuer"
+                    label: "Issued by"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - { name: "link", label: "Verification link (optional)", widget: "string", required: false }
+
+      # =====================================================================
+      #  8. CONTACT & FOOTER
+      # =====================================================================
+          - name: "contact"
+            label: "Contact"
+            widget: "object"
+            fields:
+              - { name: "sectionNumber", label: "Section number", widget: "string" }
+              - name: "sectionTitle"
+                label: "Section label"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "heading"
+                label: "Heading"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - name: "intro"
+                label: "Short paragraph"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "text" }
+                  - { name: "fa", label: "Persian", widget: "text" }
+              - { name: "showForm", label: "Show the message form", widget: "boolean" }
+              - name: "formProvider"
+                label: "Where messages are sent"
+                widget: "select"
+                options: ["netlify", "formspree", "mailto"]
+              - { name: "formspreeEndpoint", label: "Formspree address (only if using Formspree)", widget: "string", required: false }
+
+              - name: "formLabels"
+                label: "Form wording"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - name: "name"
+                    widget: "object"
+                    label: "'Your name'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "email"
+                    widget: "object"
+                    label: "'Your email'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "company"
+                    widget: "object"
+                    label: "'Company'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "message"
+                    widget: "object"
+                    label: "'Your message'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "submit"
+                    widget: "object"
+                    label: "Send button"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "sending"
+                    widget: "object"
+                    label: "'Sending…'"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - name: "success"
+                    widget: "object"
+                    label: "Success message"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+                  - name: "error"
+                    widget: "object"
+                    label: "Error message"
+                    fields:
+                      - { name: "en", label: "English", widget: "text" }
+                      - { name: "fa", label: "Persian", widget: "text" }
+
+              - name: "details"
+                label: "Contact details"
+                widget: "list"
+                fields:
+                  - { name: "enabled", label: "Show", widget: "boolean", required: false, default: true }
+                  - { name: "type", label: "Icon", widget: "select", options: ["email", "phone", "location", "website"] }
+                  - name: "label"
+                    label: "Small label"
+                    widget: "object"
+                    fields:
+                      - { name: "en", label: "English", widget: "string" }
+                      - { name: "fa", label: "Persian", widget: "string" }
+                  - { name: "value", label: "Text shown", widget: "string" }
+                  - { name: "link", label: "Link (mailto:… , tel:… , or leave empty)", widget: "string", required: false }
+
+              - name: "socials"
+                label: "Social links"
+                widget: "list"
+                summary: "{{fields.label}}"
+                fields:
+                  - { name: "enabled", label: "Show", widget: "boolean", default: true }
+                  - name: "icon"
+                    label: "Icon"
+                    widget: "select"
+                    options: ["linkedin", "whatsapp", "telegram", "instagram", "grabcad", "website"]
+                  - { name: "label", label: "Name", widget: "string" }
+                  - { name: "url", label: "Web address", widget: "string" }
+
+          - name: "footer"
+            label: "Footer"
+            widget: "object"
+            fields:
+              - name: "tagline"
+                label: "Tagline"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "copyrightName"
+                label: "Copyright name"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "note"
+                label: "Small note"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
+              - name: "backToTop"
+                label: "'Back to top'"
+                widget: "object"
+                fields:
+                  - { name: "en", label: "English", widget: "string" }
+                  - { name: "fa", label: "Persian", widget: "string" }
