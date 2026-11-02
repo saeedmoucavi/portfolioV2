@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 
-Sitemap: https://saeedmoucavi.github.io/portfolio/sitemap.xml
+Sitemap: https://saeedmoucavi.github.io/portfolioV2/sitemap.xml

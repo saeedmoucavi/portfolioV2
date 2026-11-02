@@ -1,14 +1,10 @@
 {
   "_README": [
-    "THIS FILE CONTROLS THE ENTIRE WEBSITE. Everything you can see on the site lives here.",
-    "این فایل کل سایت را کنترل می‌کند. هر چیزی که در سایت می‌بینید از اینجا می‌آید.",
-    "برای ویرایش لازم نیست این فایل را دست بزنید — آدرس yoursite.com/admin را باز کنید.",
-    "اگر خواستید دستی ویرایش کنید: فقط متن داخل \"گیومه‌ها\" را عوض کنید. کاما، آکولاد و گیومه را پاک نکنید.",
-    "هر متن دو نسخه دارد: en (انگلیسی) و fa (فارسی). هر دو را پر کنید.",
-    "راهنمای کامل فارسی در فایل راهنمای-فارسی.md است.",
-    "نکته: بعد از ویرایش دستی، فایل را در jsonlint.com بررسی کنید."
+    "THIS FILE CONTROLS THE ENTIRE WEBSITE. The easiest way to change it: open yoursite/?edit",
+    "این فایل کل سایت را کنترل می‌کند. ساده‌ترین راه ویرایش: آدرس سایت را با ?edit در انتها باز کنید (مثلاً saeedmoucavi.github.io/portfolioV2/?edit).",
+    "در حالت ویرایش روی هر متن کلیک کنید و تایپ کنید، و در آخر دکمهٔ «انتشار» را بزنید.",
+    "راهنمای کامل: فایل راهنمای-ویرایش.md"
   ],
-
   "site": {
     "brandInitials": "SM",
     "defaultLanguage": "fa",
@@ -21,45 +17,109 @@
       "en": "Mechanical engineer specialising in production fixtures, pneumatic assembly machines and factory equipment for automotive seating manufacture — from CAD and calculation through fabrication to commissioning on the line.",
       "fa": "مهندس مکانیک متخصص در طراحی فیکسچرهای تولید، دستگاه‌های مونتاژ پنوماتیک و تجهیزات کارخانه در صنعت صندلی خودرو — از طراحی و محاسبه تا ساخت و راه‌اندازی روی خط."
     },
-    "siteUrl": "https://saeedmoucavi.github.io/portfolio",
-    "ogImage": "assets/images/og-image.jpg"
+    "siteUrl": "https://saeedmoucavi.github.io/portfolioV2",
+    "ogImage": "assets/images/og-image.jpg",
+    "github": {
+      "owner": "saeedmoucavi",
+      "repo": "portfolioV2",
+      "branch": "main"
+    },
+    "cvLabel": {
+      "en": "CV",
+      "fa": "رزومه"
+    }
   },
-
   "theme": {
-    "colorBackground": "#07080B",
-    "colorSurface": "#0C0E13",
-    "colorSurfaceRaised": "#12151C",
-    "colorBorder": "#232834",
-    "colorText": "#F3F1EA",
-    "colorTextMuted": "#8C91A1",
-    "colorAccent": "#D4FF3A",
-    "colorAccentInk": "#07080B",
-    "colorBlueprint": "#7C5CFF",
-    "fontDisplay": "'Syne'",
-    "fontBody": "'Manrope'",
-    "fontMono": "'JetBrains Mono'",
-    "cornerRadius": "18px",
+    "defaultMode": "light",
+    "showModeToggle": true,
+    "accentLight": "#D9480F",
+    "accentDark": "#FF7A3D",
     "showBlueprintGrid": true,
     "enableAnimations": true
   },
-
   "sections": [
-    { "key": "hero",       "enabled": true, "showInNav": false, "navLabel": { "en": "Home",       "fa": "خانه" } },
-    { "key": "stats",      "enabled": true, "showInNav": false, "navLabel": { "en": "Stats",      "fa": "آمار" } },
-    { "key": "about",      "enabled": true, "showInNav": true,  "navLabel": { "en": "About",      "fa": "درباره من" } },
-    { "key": "skills",     "enabled": true, "showInNav": true,  "navLabel": { "en": "Expertise",  "fa": "تخصص‌ها" } },
-    { "key": "projects",   "enabled": true, "showInNav": true,  "navLabel": { "en": "Projects",   "fa": "پروژه‌ها" } },
-    { "key": "experience", "enabled": true, "showInNav": true,  "navLabel": { "en": "Experience", "fa": "سوابق کاری" } },
-    { "key": "education",  "enabled": true, "showInNav": true,  "navLabel": { "en": "Education",  "fa": "تحصیلات" } },
-    { "key": "contact",    "enabled": true, "showInNav": true,  "navLabel": { "en": "Contact",    "fa": "تماس" } }
+    {
+      "key": "hero",
+      "enabled": true,
+      "showInNav": false,
+      "navLabel": {
+        "en": "Home",
+        "fa": "خانه"
+      }
+    },
+    {
+      "key": "stats",
+      "enabled": true,
+      "showInNav": false,
+      "navLabel": {
+        "en": "Stats",
+        "fa": "آمار"
+      }
+    },
+    {
+      "key": "about",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "About",
+        "fa": "درباره من"
+      }
+    },
+    {
+      "key": "skills",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "Expertise",
+        "fa": "تخصص‌ها"
+      }
+    },
+    {
+      "key": "projects",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "Projects",
+        "fa": "پروژه‌ها"
+      }
+    },
+    {
+      "key": "experience",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "Experience",
+        "fa": "سوابق کاری"
+      }
+    },
+    {
+      "key": "education",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "Education",
+        "fa": "تحصیلات"
+      }
+    },
+    {
+      "key": "contact",
+      "enabled": true,
+      "showInNav": true,
+      "navLabel": {
+        "en": "Contact",
+        "fa": "تماس"
+      }
+    }
   ],
-
   "hero": {
     "eyebrow": {
       "en": "Mechanical Engineer — Production Equipment & Fixtures",
       "fa": "مهندس مکانیک — تجهیزات و فیکسچرهای تولید"
     },
-    "name": { "en": "Saeed Mousavi", "fa": "سعید موسوی" },
+    "name": {
+      "en": "Saeed Mousavi",
+      "fa": "سعید موسوی"
+    },
     "headline": {
       "en": "I design and build the equipment that keeps a production line running.",
       "fa": "تجهیزاتی را طراحی و می‌سازم که خط تولید را سرِ پا نگه می‌دارد."
@@ -68,29 +128,73 @@
       "en": "Assembly machines, control and test fixtures, and material-handling equipment for automotive seating manufacture — from concept and CAD through fabrication supervision to commissioning on the factory floor.",
       "fa": "دستگاه‌های مونتاژ، فیکسچرهای کنترلی و تست، و تجهیزات جابه‌جایی برای تولید صندلی خودرو — از ایده و طراحی سه‌بعدی تا نظارت بر ساخت و راه‌اندازی در سالن تولید."
     },
-    "primaryButtonLabel": { "en": "View Projects", "fa": "مشاهدهٔ پروژه‌ها" },
+    "primaryButtonLabel": {
+      "en": "View Projects",
+      "fa": "مشاهدهٔ پروژه‌ها"
+    },
     "primaryButtonLink": "#projects",
-    "secondaryButtonLabel": { "en": "Download CV", "fa": "دانلود رزومه" },
+    "secondaryButtonLabel": {
+      "en": "Download CV",
+      "fa": "دانلود رزومه"
+    },
     "secondaryButtonLink": "assets/files/cv-saeed-mousavi-en.pdf",
     "photo": "assets/images/portrait-placeholder.svg",
-    "photoAlt": { "en": "Portrait of Saeed Mousavi", "fa": "تصویر سعید موسوی" },
-    "photoCaption": { "en": "SAEED MOUSAVI / MECH. ENG.", "fa": "سعید موسوی / مهندس مکانیک" },
-    "scrollHint": { "en": "Scroll", "fa": "به پایین بروید" }
+    "photoAlt": {
+      "en": "Portrait of Saeed Mousavi",
+      "fa": "تصویر سعید موسوی"
+    },
+    "photoCaption": {
+      "en": "SAEED MOUSAVI / MECH. ENG.",
+      "fa": "سعید موسوی / مهندس مکانیک"
+    },
+    "availability": {
+      "en": "Open to new projects",
+      "fa": "آمادهٔ همکاری در پروژه‌های جدید"
+    }
   },
-
   "stats": {
     "enabled": true,
     "items": [
-      { "value": "5",   "suffix": "+", "label": { "en": "Years in mechanical design",  "fa": "سال طراحی مکانیکی" } },
-      { "value": "30",  "suffix": "+", "label": { "en": "Equipment projects delivered","fa": "پروژهٔ تجهیزاتی تحویل‌شده" } },
-      { "value": "290", "suffix": "+", "label": { "en": "Units fabricated",            "fa": "دستگاه و تجهیز ساخته‌شده" } },
-      { "value": "6",   "suffix": "",  "label": { "en": "Production halls equipped",   "fa": "سالن تولید تجهیزشده" } }
+      {
+        "value": "5",
+        "suffix": "+",
+        "label": {
+          "en": "Years in mechanical design",
+          "fa": "سال طراحی مکانیکی"
+        }
+      },
+      {
+        "value": "30",
+        "suffix": "+",
+        "label": {
+          "en": "Equipment projects delivered",
+          "fa": "پروژهٔ تجهیزاتی تحویل‌شده"
+        }
+      },
+      {
+        "value": "290",
+        "suffix": "+",
+        "label": {
+          "en": "Units fabricated",
+          "fa": "دستگاه و تجهیز ساخته‌شده"
+        }
+      },
+      {
+        "value": "6",
+        "suffix": "",
+        "label": {
+          "en": "Production halls equipped",
+          "fa": "سالن تولید تجهیزشده"
+        }
+      }
     ]
   },
-
   "about": {
     "sectionNumber": "01",
-    "sectionTitle": { "en": "About", "fa": "درباره من" },
+    "sectionTitle": {
+      "en": "About",
+      "fa": "درباره من"
+    },
     "heading": {
       "en": "A machine is judged on the factory floor, not in the CAD window.",
       "fa": "ماشین در سالن تولید قضاوت می‌شود، نه در پنجرهٔ نرم‌افزار."
@@ -109,21 +213,89 @@
         "fa": "پیشینهٔ پژوهشی من در رباتیک و کنترل است — مدل‌سازی مکانیزم‌ها، برنامه‌ریزی مسیر حرکت و کنترل هوشمند ربات‌های کابلی و پیوسته در آزمایشگاه رباتیک آرَس. همین بخش از آموزشم باعث می‌شود بتوانم یک مکانیزم را از سینماتیک روی کاغذ تا یک توالی پنوماتیک برسانم که اپراتور خط بتواند تمام روز بدون فکر کردن با آن کار کند."
       }
     ],
-    "specSheetTitle": { "en": "Specification", "fa": "مشخصات" },
+    "specSheetTitle": {
+      "en": "Specification",
+      "fa": "مشخصات"
+    },
     "specs": [
-      { "label": { "en": "Based in",     "fa": "محل استقرار" }, "value": { "en": "Tehran, Iran",                          "fa": "تهران، ایران" } },
-      { "label": { "en": "Experience",   "fa": "تجربه" },       "value": { "en": "5+ years",                              "fa": "بیش از ۵ سال" } },
-      { "label": { "en": "Focus",        "fa": "حوزهٔ تمرکز" }, "value": { "en": "Fixtures, assembly machines, line equipment", "fa": "فیکسچر، دستگاه مونتاژ، تجهیزات خط" } },
-      { "label": { "en": "Industry",     "fa": "صنعت" },        "value": { "en": "Automotive seating & interiors",        "fa": "صندلی و تزئینات خودرو" } },
-      { "label": { "en": "Education",    "fa": "تحصیلات" },     "value": { "en": "M.Sc. Mechatronics, K. N. Toosi",       "fa": "ارشد مکاترونیک، خواجه نصیر" } },
-      { "label": { "en": "Languages",    "fa": "زبان‌ها" },     "value": { "en": "Persian, English",                      "fa": "فارسی، انگلیسی" } },
-      { "label": { "en": "Availability", "fa": "وضعیت همکاری" },"value": { "en": "Open to projects",                      "fa": "آمادهٔ همکاری" } }
+      {
+        "label": {
+          "en": "Based in",
+          "fa": "محل استقرار"
+        },
+        "value": {
+          "en": "Tehran, Iran",
+          "fa": "تهران، ایران"
+        }
+      },
+      {
+        "label": {
+          "en": "Experience",
+          "fa": "تجربه"
+        },
+        "value": {
+          "en": "5+ years",
+          "fa": "بیش از ۵ سال"
+        }
+      },
+      {
+        "label": {
+          "en": "Focus",
+          "fa": "حوزهٔ تمرکز"
+        },
+        "value": {
+          "en": "Fixtures, assembly machines, line equipment",
+          "fa": "فیکسچر، دستگاه مونتاژ، تجهیزات خط"
+        }
+      },
+      {
+        "label": {
+          "en": "Industry",
+          "fa": "صنعت"
+        },
+        "value": {
+          "en": "Automotive seating & interiors",
+          "fa": "صندلی و تزئینات خودرو"
+        }
+      },
+      {
+        "label": {
+          "en": "Education",
+          "fa": "تحصیلات"
+        },
+        "value": {
+          "en": "M.Sc. Mechatronics, K. N. Toosi",
+          "fa": "ارشد مکاترونیک، خواجه نصیر"
+        }
+      },
+      {
+        "label": {
+          "en": "Languages",
+          "fa": "زبان‌ها"
+        },
+        "value": {
+          "en": "Persian, English",
+          "fa": "فارسی، انگلیسی"
+        }
+      },
+      {
+        "label": {
+          "en": "Availability",
+          "fa": "وضعیت همکاری"
+        },
+        "value": {
+          "en": "Open to projects",
+          "fa": "آمادهٔ همکاری"
+        }
+      }
     ]
   },
-
   "skills": {
     "sectionNumber": "02",
-    "sectionTitle": { "en": "Skills & Expertise", "fa": "مهارت‌ها و تخصص" },
+    "sectionTitle": {
+      "en": "Skills & Expertise",
+      "fa": "مهارت‌ها و تخصص"
+    },
     "heading": {
       "en": "From concept calculation to a commissioned station.",
       "fa": "از محاسبهٔ اولیه تا ایستگاه راه‌اندازی‌شده."
@@ -132,86 +304,205 @@
       {
         "enabled": true,
         "icon": "drafting",
-        "title": { "en": "Design & CAD", "fa": "طراحی و نقشه‌کشی" },
+        "title": {
+          "en": "Design & CAD",
+          "fa": "طراحی و نقشه‌کشی"
+        },
         "description": {
           "en": "Machine layout, fixture design, mechanism design and complete fabrication drawing packages.",
           "fa": "چیدمان ماشین، طراحی فیکسچر، طراحی مکانیزم و پکیج کامل نقشه‌های ساخت."
         },
         "skills": [
-          { "name": "SolidWorks", "level": 90 },
-          { "name": "CATIA", "level": 90 },
-          { "name": "AutoCAD", "level": 65 },
-          { "name": "Fixture & jig design", "level": 90 },
-          { "name": "Manufacturing drawings / GD&T", "level": 80 }
+          {
+            "name": "SolidWorks",
+            "level": 90
+          },
+          {
+            "name": "CATIA",
+            "level": 90
+          },
+          {
+            "name": "AutoCAD",
+            "level": 65
+          },
+          {
+            "name": "Fixture & jig design",
+            "level": 90
+          },
+          {
+            "name": "Manufacturing drawings / GD&T",
+            "level": 80
+          }
         ]
       },
       {
         "enabled": true,
         "icon": "manufacturing",
-        "title": { "en": "Manufacturing & Fabrication", "fa": "ساخت و تولید" },
+        "title": {
+          "en": "Manufacturing & Fabrication",
+          "fa": "ساخت و تولید"
+        },
         "description": {
           "en": "Welded steel structures, aluminium profile framing, machined components and supervision of the build.",
           "fa": "سازه‌های فولادی جوشی، شاسی‌های پروفیل آلومینیومی، قطعات ماشین‌کاری‌شده و نظارت بر ساخت."
         },
         "skills": [
-          { "name": "Design for manufacture", "level": 85 },
-          { "name": "Welded structures", "level": 85 },
-          { "name": "Aluminium profile framing", "level": 90 },
-          { "name": "Machining & build supervision", "level": 80 }
+          {
+            "name": "Design for manufacture",
+            "level": 85
+          },
+          {
+            "name": "Welded structures",
+            "level": 85
+          },
+          {
+            "name": "Aluminium profile framing",
+            "level": 90
+          },
+          {
+            "name": "Machining & build supervision",
+            "level": 80
+          }
         ]
       },
       {
         "enabled": true,
         "icon": "automation",
-        "title": { "en": "Automation & Mechatronics", "fa": "اتوماسیون و مکاترونیک" },
+        "title": {
+          "en": "Automation & Mechatronics",
+          "fa": "اتوماسیون و مکاترونیک"
+        },
         "description": {
           "en": "Pneumatic clamping and actuation sequences, mechanism kinematics and control systems.",
           "fa": "توالی‌های کلمپ و حرکت پنوماتیک، سینماتیک مکانیزم و سیستم‌های کنترل."
         },
         "skills": [
-          { "name": "Pneumatic systems", "level": 85 },
-          { "name": "Mechanism & kinematics", "level": 85 },
-          { "name": "Robotics & motion planning", "level": 80 },
-          { "name": "Intelligent / fuzzy control", "level": 75 }
+          {
+            "name": "Pneumatic systems",
+            "level": 85
+          },
+          {
+            "name": "Mechanism & kinematics",
+            "level": 85
+          },
+          {
+            "name": "Robotics & motion planning",
+            "level": 80
+          },
+          {
+            "name": "Intelligent / fuzzy control",
+            "level": 75
+          }
         ]
       },
       {
         "enabled": true,
         "icon": "analysis",
-        "title": { "en": "Analysis & Programming", "fa": "تحلیل و برنامه‌نویسی" },
+        "title": {
+          "en": "Analysis & Programming",
+          "fa": "تحلیل و برنامه‌نویسی"
+        },
         "description": {
           "en": "Modelling, simulation and data work — the engineering that happens before anything is cut.",
           "fa": "مدل‌سازی، شبیه‌سازی و کار با داده — مهندسی‌ای که پیش از برش اولین قطعه انجام می‌شود."
         },
         "skills": [
-          { "name": "MATLAB", "level": 90 },
-          { "name": "Python", "level": 85 },
-          { "name": "Machine learning", "level": 75 },
-          { "name": "Image & signal processing", "level": 75 }
+          {
+            "name": "MATLAB",
+            "level": 90
+          },
+          {
+            "name": "Python",
+            "level": 85
+          },
+          {
+            "name": "Machine learning",
+            "level": 75
+          },
+          {
+            "name": "Image & signal processing",
+            "level": 75
+          }
         ]
       }
     ]
   },
-
   "projects": {
     "sectionNumber": "03",
-    "sectionTitle": { "en": "Selected Projects", "fa": "پروژه‌های منتخب" },
+    "sectionTitle": {
+      "en": "Selected Projects",
+      "fa": "پروژه‌های منتخب"
+    },
     "heading": {
       "en": "Equipment designed, built and running in production.",
       "fa": "تجهیزاتی که طراحی، ساخته و در تولید راه‌اندازی شده‌اند."
     },
     "showFilters": true,
-    "allFilterLabel": { "en": "All", "fa": "همه" },
+    "allFilterLabel": {
+      "en": "All",
+      "fa": "همه"
+    },
     "detailLabels": {
-      "problem":  { "en": "The Challenge", "fa": "نیازمندی و چالش" },
-      "solution": { "en": "My Approach",   "fa": "توصیف پروژه" },
-      "role":     { "en": "My Role",       "fa": "نقش من" },
-      "tools":    { "en": "Tools Used",    "fa": "ابزارها" },
-      "outcome":  { "en": "Outcome",       "fa": "سودمندی" },
-      "specs":    { "en": "Specifications","fa": "مشخصات فنی" },
-      "gallery":  { "en": "Gallery",       "fa": "گالری تصاویر" },
-      "viewMore": { "en": "View project",  "fa": "مشاهدهٔ پروژه" },
-      "close":    { "en": "Close",         "fa": "بستن" }
+      "problem": {
+        "en": "The Challenge",
+        "fa": "نیازمندی و چالش"
+      },
+      "solution": {
+        "en": "My Approach",
+        "fa": "توصیف پروژه"
+      },
+      "role": {
+        "en": "My Role",
+        "fa": "نقش من"
+      },
+      "tools": {
+        "en": "Tools Used",
+        "fa": "ابزارها"
+      },
+      "outcome": {
+        "en": "Outcome",
+        "fa": "سودمندی"
+      },
+      "specs": {
+        "en": "Specifications",
+        "fa": "مشخصات فنی"
+      },
+      "gallery": {
+        "en": "Gallery",
+        "fa": "گالری تصاویر"
+      },
+      "viewMore": {
+        "en": "View project",
+        "fa": "مشاهدهٔ پروژه"
+      },
+      "close": {
+        "en": "Close",
+        "fa": "بستن"
+      },
+      "back": {
+        "en": "All projects",
+        "fa": "همهٔ پروژه‌ها"
+      },
+      "prev": {
+        "en": "Previous project",
+        "fa": "پروژهٔ قبلی"
+      },
+      "next": {
+        "en": "Next project",
+        "fa": "پروژهٔ بعدی"
+      },
+      "client": {
+        "en": "Client",
+        "fa": "کارفرما"
+      },
+      "year": {
+        "en": "Year",
+        "fa": "سال"
+      },
+      "category": {
+        "en": "Category",
+        "fa": "دسته"
+      }
     },
     "items": [
       {
@@ -223,8 +514,14 @@
           "en": "Pneumatic Assembly Machine — Front Seat Fan & Bracket",
           "fa": "دستگاه مونتاژ فن و براکت صندلی جلو"
         },
-        "category": { "en": "Assembly Automation", "fa": "اتوماسیون مونتاژ" },
-        "client": { "en": "Internal — Engineering Department", "fa": "داخلی — واحد مهندسی" },
+        "category": {
+          "en": "Assembly Automation",
+          "fa": "اتوماسیون مونتاژ"
+        },
+        "client": {
+          "en": "Internal — Engineering Department",
+          "fa": "داخلی — واحد مهندسی"
+        },
         "summary": {
           "en": "A semi-automatic pneumatic machine that clamps and draws plastic ribs together, replacing a hand operation whose quality depended entirely on operator skill.",
           "fa": "دستگاهی نیمه‌اتوماتیک و پنوماتیک که ریب‌های پلاستیکی را کلمپ و به هم می‌کشد و جایگزین عملیاتی دستی شد که کیفیتش کاملاً به مهارت اپراتور وابسته بود."
@@ -245,18 +542,77 @@
           "en": "The joint quality is far more consistent, and assembly faults — ribs not fully seated, damaged plastic ribs, skewed assemblies — are much less likely. Mechanising the operation cut assembly time and the dependence on operator skill, and raised the uniformity of the output. Less rework and less scrap from failed joints lowered quality costs and removed a bottleneck at the assembly station.",
           "fa": "این دستگاه کیفیت اتصال را پایدارتر کرد و ریسک خطاهای مونتاژی مثل جا نرفتن کامل ریب‌ها، آسیب دیدن ریب پلاستیکی یا مونتاژ کج را کاهش داد. با مکانیزه شدن عملیات، زمان مونتاژ و وابستگی به مهارت اپراتور کمتر شد و یکنواختی خروجی بالا رفت. همچنین کاهش دوباره‌کاری و ضایعات ناشی از خرابی اتصال، هزینه‌های کیفیت را پایین آورد و از ایجاد گلوگاه در ایستگاه مونتاژ جلوگیری کرد."
         },
-        "tools": ["SolidWorks", "Pneumatics", "Aluminium profile", "Sheet metal"],
+        "tools": [
+          "SolidWorks",
+          "Pneumatics",
+          "Aluminium profile",
+          "Sheet metal"
+        ],
         "specs": [
-          { "label": { "en": "Type",      "fa": "نوع" },        "value": { "en": "Semi-automatic, pneumatic",  "fa": "نیمه‌اتوماتیک، پنوماتیک" } },
-          { "label": { "en": "Actuation", "fa": "محرک" },       "value": { "en": "Synchronised clamp + draw cylinders", "fa": "جک‌های کلمپ و کشش هم‌زمان" } },
-          { "label": { "en": "Frame",     "fa": "شاسی" },       "value": { "en": "Aluminium profile + sheet panels", "fa": "پروفیل آلومینیوم و ورق" } },
-          { "label": { "en": "Controls",  "fa": "کنترل" },      "value": { "en": "Two-hand start, E-stop",      "fa": "استارت دو دستی، استپ اضطراری" } }
+          {
+            "label": {
+              "en": "Type",
+              "fa": "نوع"
+            },
+            "value": {
+              "en": "Semi-automatic, pneumatic",
+              "fa": "نیمه‌اتوماتیک، پنوماتیک"
+            }
+          },
+          {
+            "label": {
+              "en": "Actuation",
+              "fa": "محرک"
+            },
+            "value": {
+              "en": "Synchronised clamp + draw cylinders",
+              "fa": "جک‌های کلمپ و کشش هم‌زمان"
+            }
+          },
+          {
+            "label": {
+              "en": "Frame",
+              "fa": "شاسی"
+            },
+            "value": {
+              "en": "Aluminium profile + sheet panels",
+              "fa": "پروفیل آلومینیوم و ورق"
+            }
+          },
+          {
+            "label": {
+              "en": "Controls",
+              "fa": "کنترل"
+            },
+            "value": {
+              "en": "Two-hand start, E-stop",
+              "fa": "استارت دو دستی، استپ اضطراری"
+            }
+          }
         ],
         "cover": "assets/images/fan-bracket-render.jpg",
         "gallery": [
-          { "image": "assets/images/fan-bracket-render.jpg",    "caption": { "en": "CAD model of the finished machine",                 "fa": "مدل سه‌بعدی دستگاه" } },
-          { "image": "assets/images/fan-bracket-mechanism.jpg", "caption": { "en": "Exploded view of the internal pneumatic mechanism", "fa": "نمای انفجاری مکانیزم پنوماتیک داخلی" } },
-          { "image": "assets/images/fan-bracket-built.jpg",     "caption": { "en": "The machine built and installed at the station",     "fa": "دستگاه ساخته‌شده و مستقر در ایستگاه" } }
+          {
+            "image": "assets/images/fan-bracket-render.jpg",
+            "caption": {
+              "en": "CAD model of the finished machine",
+              "fa": "مدل سه‌بعدی دستگاه"
+            }
+          },
+          {
+            "image": "assets/images/fan-bracket-mechanism.jpg",
+            "caption": {
+              "en": "Exploded view of the internal pneumatic mechanism",
+              "fa": "نمای انفجاری مکانیزم پنوماتیک داخلی"
+            }
+          },
+          {
+            "image": "assets/images/fan-bracket-built.jpg",
+            "caption": {
+              "en": "The machine built and installed at the station",
+              "fa": "دستگاه ساخته‌شده و مستقر در ایستگاه"
+            }
+          }
         ]
       },
       {
@@ -268,8 +624,14 @@
           "en": "Double-Sided Friction Riveting / End-Forming Fixture",
           "fa": "فیکسچر پرس دوطرفه مالشی — دستگاه End forming"
         },
-        "category": { "en": "Fixtures & Tooling", "fa": "فیکسچر و ابزار" },
-        "client": { "en": "Internal — Engineering Department", "fa": "داخلی — واحد مهندسی" },
+        "category": {
+          "en": "Fixtures & Tooling",
+          "fa": "فیکسچر و ابزار"
+        },
+        "client": {
+          "en": "Internal — Engineering Department",
+          "fa": "داخلی — واحد مهندسی"
+        },
         "summary": {
           "en": "A fixture holding a seat frame in an exact reference position so friction riveting can be carried out from both sides at once without the tubes twisting or going oval.",
           "fa": "فیکسچری که فریم صندلی را در موقعیت مرجع دقیق نگه می‌دارد تا پرچ مالشی از دو سمت انجام شود، بدون آنکه لوله‌ها تابیده یا بیضی شوند."
@@ -290,17 +652,70 @@
           "en": "Joint quality became far more repeatable and defects caused by the part shifting or by misalignment during riveting dropped. With the tubes better fixed, twisting, deformation and dimensional rejects became less likely and rework fell. Easier loading and unloading, and a standard method for the two-sided operation, cut cycle time and the stoppages caused by manual setting-up, raising throughput at the riveting station.",
           "fa": "این فیکسچر باعث افزایش تکرارپذیری کیفیت اتصال و کاهش عیوب ناشی از جابه‌جایی قطعه یا ناهم‌محوری حین پرچ شد. با تثبیت بهتر لوله‌ها، احتمال تابیدگی، تغییرشکل و مردودی‌های ابعادی کمتر شد و نیاز به دوباره‌کاری کاهش پیدا کرد. همچنین با تسهیل بارگذاری و برداشت و ایجاد یک روش استاندارد برای عملیات دوطرفه، زمان سیکل و توقف‌های ناشی از تنظیمات دستی کاهش یافت و بهره‌وری ایستگاه پرچ بالاتر رفت."
         },
-        "tools": ["SolidWorks", "Pneumatics", "Machined steel", "GD&T"],
+        "tools": [
+          "SolidWorks",
+          "Pneumatics",
+          "Machined steel",
+          "GD&T"
+        ],
         "specs": [
-          { "label": { "en": "Press capacity", "fa": "ظرفیت پرس" },   "value": { "en": "2 × 10 ton units",       "fa": "۲ × یونیت ۱۰ تن" } },
-          { "label": { "en": "Operation",      "fa": "عملیات" },      "value": { "en": "Double-sided, co-axial", "fa": "دوطرفه، هم‌محور" } },
-          { "label": { "en": "Clamping",       "fa": "کلمپ" },        "value": { "en": "Pneumatic, form-matched supports", "fa": "پنوماتیک، تکیه‌گاه فرم‌دار" } },
-          { "label": { "en": "Status",         "fa": "وضعیت" },       "value": { "en": "Delivered and in production", "fa": "تحویل‌شده و در حال تولید" } }
+          {
+            "label": {
+              "en": "Press capacity",
+              "fa": "ظرفیت پرس"
+            },
+            "value": {
+              "en": "2 × 10 ton units",
+              "fa": "۲ × یونیت ۱۰ تن"
+            }
+          },
+          {
+            "label": {
+              "en": "Operation",
+              "fa": "عملیات"
+            },
+            "value": {
+              "en": "Double-sided, co-axial",
+              "fa": "دوطرفه، هم‌محور"
+            }
+          },
+          {
+            "label": {
+              "en": "Clamping",
+              "fa": "کلمپ"
+            },
+            "value": {
+              "en": "Pneumatic, form-matched supports",
+              "fa": "پنوماتیک، تکیه‌گاه فرم‌دار"
+            }
+          },
+          {
+            "label": {
+              "en": "Status",
+              "fa": "وضعیت"
+            },
+            "value": {
+              "en": "Delivered and in production",
+              "fa": "تحویل‌شده و در حال تولید"
+            }
+          }
         ],
         "cover": "assets/images/double-side-press-render.jpg",
         "gallery": [
-          { "image": "assets/images/double-side-press-render.jpg", "caption": { "en": "CAD layout of the double-sided fixture between the two press units", "fa": "چیدمان سه‌بعدی فیکسچر دوطرفه بین دو یونیت پرس" } },
-          { "image": "assets/images/end-forming-installed.jpg",    "caption": { "en": "Installed and running on the end-forming machine",                 "fa": "نصب‌شده و در حال کار روی دستگاه End forming" } }
+          {
+            "image": "assets/images/double-side-press-render.jpg",
+            "caption": {
+              "en": "CAD layout of the double-sided fixture between the two press units",
+              "fa": "چیدمان سه‌بعدی فیکسچر دوطرفه بین دو یونیت پرس"
+            }
+          },
+          {
+            "image": "assets/images/end-forming-installed.jpg",
+            "caption": {
+              "en": "Installed and running on the end-forming machine",
+              "fa": "نصب‌شده و در حال کار روی دستگاه End forming"
+            }
+          }
         ]
       },
       {
@@ -312,8 +727,14 @@
           "en": "Rotary Assembly Fixture — Driver & Passenger Seat",
           "fa": "فیکسچر مونتاژی راننده و سرنشین"
         },
-        "category": { "en": "Fixtures & Tooling", "fa": "فیکسچر و ابزار" },
-        "client": { "en": "Internal — Engineering Department", "fa": "داخلی — واحد مهندسی" },
+        "category": {
+          "en": "Fixtures & Tooling",
+          "fa": "فیکسچر و ابزار"
+        },
+        "client": {
+          "en": "Internal — Engineering Department",
+          "fa": "داخلی — واحد مهندسی"
+        },
         "summary": {
           "en": "An assembly fixture with a rotating plate that combines two previously separate assembly operations into one station.",
           "fa": "فیکسچر مونتاژی با پلیت روتاری که دو عملیات مونتاژ جداگانه را در یک ایستگاه تجمیع می‌کند."
@@ -334,16 +755,62 @@
           "en": "Combining the two operations removes a handling step between stations, and the rotating plate improves the operator's access and posture — both of which shorten the assembly cycle and reduce the chance of positioning error.",
           "fa": "تجمیع دو عملیات، یک مرحلهٔ جابه‌جایی بین ایستگاه‌ها را حذف می‌کند و پلیت گردان دسترسی و وضعیت بدنی اپراتور را بهتر می‌کند — هر دو باعث کوتاه‌تر شدن سیکل مونتاژ و کاهش احتمال خطای موقعیت‌دهی می‌شوند."
         },
-        "tools": ["SolidWorks", "Rotary mechanism", "Welded frame"],
+        "tools": [
+          "SolidWorks",
+          "Rotary mechanism",
+          "Welded frame"
+        ],
         "specs": [
-          { "label": { "en": "Feature",  "fa": "ویژگی" },   "value": { "en": "Rotary fixture plate", "fa": "پلیت فیکسچر روتاری" } },
-          { "label": { "en": "Combines", "fa": "تجمیع" },   "value": { "en": "2 assembly operations", "fa": "۲ عملیات مونتاژ" } },
-          { "label": { "en": "Timeline", "fa": "بازهٔ اجرا" },"value": { "en": "Ordibehesht – Shahrivar 1405", "fa": "اردیبهشت تا شهریور ۱۴۰۵" } },
-          { "label": { "en": "Status",   "fa": "وضعیت" },   "value": { "en": "In design", "fa": "در دست طراحی" } }
+          {
+            "label": {
+              "en": "Feature",
+              "fa": "ویژگی"
+            },
+            "value": {
+              "en": "Rotary fixture plate",
+              "fa": "پلیت فیکسچر روتاری"
+            }
+          },
+          {
+            "label": {
+              "en": "Combines",
+              "fa": "تجمیع"
+            },
+            "value": {
+              "en": "2 assembly operations",
+              "fa": "۲ عملیات مونتاژ"
+            }
+          },
+          {
+            "label": {
+              "en": "Timeline",
+              "fa": "بازهٔ اجرا"
+            },
+            "value": {
+              "en": "Ordibehesht – Shahrivar 1405",
+              "fa": "اردیبهشت تا شهریور ۱۴۰۵"
+            }
+          },
+          {
+            "label": {
+              "en": "Status",
+              "fa": "وضعیت"
+            },
+            "value": {
+              "en": "In design",
+              "fa": "در دست طراحی"
+            }
+          }
         ],
         "cover": "assets/images/respect-fixture-render.jpg",
         "gallery": [
-          { "image": "assets/images/respect-fixture-render.jpg", "caption": { "en": "CAD model of the fixture on its workbench", "fa": "مدل سه‌بعدی فیکسچر روی میز کار" } }
+          {
+            "image": "assets/images/respect-fixture-render.jpg",
+            "caption": {
+              "en": "CAD model of the fixture on its workbench",
+              "fa": "مدل سه‌بعدی فیکسچر روی میز کار"
+            }
+          }
         ]
       },
       {
@@ -355,8 +822,14 @@
           "en": "Go/No-Go Control Fixture — Front & Rear Links",
           "fa": "فیکسچر کنترلی لینک عقب و جلو"
         },
-        "category": { "en": "Inspection & Gauging", "fa": "کنترل و بازرسی" },
-        "client": { "en": "Internal — Quality / Engineering", "fa": "داخلی — کیفیت و مهندسی" },
+        "category": {
+          "en": "Inspection & Gauging",
+          "fa": "کنترل و بازرسی"
+        },
+        "client": {
+          "en": "Internal — Quality / Engineering",
+          "fa": "داخلی — کیفیت و مهندسی"
+        },
         "summary": {
           "en": "A CMM-verified inspection fixture that checks the dimensions, parallelism and coaxiality of the front and rear links in seconds instead of minutes.",
           "fa": "فیکسچر کنترلی تأییدشده با CMM که ابعاد، توازی و هم‌محوری لینک عقب و جلو را در چند ثانیه به‌جای چند دقیقه کنترل می‌کند."
@@ -377,17 +850,70 @@
           "en": "Non-conforming parts are caught quickly, which cuts scrap at later stages, prevents a defective part from being assembled, and lowers rework costs. Traceability of the inspection results is better and the inspection method is standardised, raising both output quality and confidence in the process.",
           "fa": "تشخیص سریع قطعات نامنطبق باعث کاهش ضایعات در مراحل بعدی، جلوگیری از مونتاژ قطعهٔ معیوب و کاهش هزینه‌های دوباره‌کاری می‌شود. علاوه بر این، قابلیت ردیابی بهتر نتایج کنترل و استاندارد شدن روش بازرسی، کیفیت خروجی و اعتمادپذیری فرآیند را بالا می‌برد."
         },
-        "tools": ["CATIA", "SolidWorks", "GD&T", "CMM verification"],
+        "tools": [
+          "CATIA",
+          "SolidWorks",
+          "GD&T",
+          "CMM verification"
+        ],
         "specs": [
-          { "label": { "en": "Checks",       "fa": "کنترل‌ها" },   "value": { "en": "Dimensions, parallelism, coaxiality", "fa": "ابعاد، توازی، هم‌محوری" } },
-          { "label": { "en": "Method",       "fa": "روش" },        "value": { "en": "Datum pins + go/no-go pin",           "fa": "پین مرجع و پین برو/نرو" } },
-          { "label": { "en": "Verification", "fa": "صحه‌گذاری" },  "value": { "en": "CMM verified",                        "fa": "تأییدشده با CMM" } },
-          { "label": { "en": "Covers",       "fa": "پوشش" },       "value": { "en": "Front and rear link",                 "fa": "لینک عقب و جلو" } }
+          {
+            "label": {
+              "en": "Checks",
+              "fa": "کنترل‌ها"
+            },
+            "value": {
+              "en": "Dimensions, parallelism, coaxiality",
+              "fa": "ابعاد، توازی، هم‌محوری"
+            }
+          },
+          {
+            "label": {
+              "en": "Method",
+              "fa": "روش"
+            },
+            "value": {
+              "en": "Datum pins + go/no-go pin",
+              "fa": "پین مرجع و پین برو/نرو"
+            }
+          },
+          {
+            "label": {
+              "en": "Verification",
+              "fa": "صحه‌گذاری"
+            },
+            "value": {
+              "en": "CMM verified",
+              "fa": "تأییدشده با CMM"
+            }
+          },
+          {
+            "label": {
+              "en": "Covers",
+              "fa": "پوشش"
+            },
+            "value": {
+              "en": "Front and rear link",
+              "fa": "لینک عقب و جلو"
+            }
+          }
         ],
         "cover": "assets/images/envoy-fixture-render.jpg",
         "gallery": [
-          { "image": "assets/images/envoy-fixture-render.jpg", "caption": { "en": "CAD model showing both link positions on one base plate", "fa": "مدل سه‌بعدی: هر دو موقعیت لینک روی یک پلیت" } },
-          { "image": "assets/images/envoy-fixture-built.jpg",  "caption": { "en": "The finished fixture, tagged after CMM verification",     "fa": "فیکسچر ساخته‌شده، برچسب‌خورده پس از تأیید CMM" } }
+          {
+            "image": "assets/images/envoy-fixture-render.jpg",
+            "caption": {
+              "en": "CAD model showing both link positions on one base plate",
+              "fa": "مدل سه‌بعدی: هر دو موقعیت لینک روی یک پلیت"
+            }
+          },
+          {
+            "image": "assets/images/envoy-fixture-built.jpg",
+            "caption": {
+              "en": "The finished fixture, tagged after CMM verification",
+              "fa": "فیکسچر ساخته‌شده، برچسب‌خورده پس از تأیید CMM"
+            }
+          }
         ]
       },
       {
@@ -399,8 +925,14 @@
           "en": "Airbag Roll Stand",
           "fa": "استند رول ایربگ"
         },
-        "category": { "en": "Material Handling", "fa": "تجهیزات جابه‌جایی" },
-        "client": { "en": "Internal — Production", "fa": "داخلی — تولید" },
+        "category": {
+          "en": "Material Handling",
+          "fa": "تجهیزات جابه‌جایی"
+        },
+        "client": {
+          "en": "Internal — Production",
+          "fa": "داخلی — تولید"
+        },
         "summary": {
           "en": "A light aluminium-profile stand with idler rollers that lets a heavy airbag roll be moved, set up and turned with almost no effort from the operator.",
           "fa": "استندی سبک از پروفیل آلومینیومی با رولرهای هرزگرد که جابه‌جایی، آماده‌سازی و چرخاندن رول سنگین ایربگ را با کمترین نیروی اپراتور ممکن می‌کند."
@@ -421,16 +953,59 @@
           "en": "Moving and preparing the airbag roll is faster and takes less force, and the stoppages caused by the roll jamming or needing to be re-set have fallen. The smooth-turning shaft reduces the chance of damaging the roll — creasing, abrasion, edge damage — and makes feeding and unwinding more consistent. Removing the unsafe, improvised ways the roll used to be supported also improved operator safety and ergonomics, and left the work area cleaner and better organised.",
           "fa": "این استند باعث می‌شود جابه‌جایی و آماده‌سازی رول ایربگ سریع‌تر و با نیروی کمتر انجام شود و زمان‌های توقف ناشی از گیرکردن یا تنظیم مجدد رول کاهش پیدا کند. چرخش روان شفت، احتمال آسیب به رول (چروک، سایش، لب‌پر شدن) را کم می‌کند و کیفیت تغذیه و بازشدن رول را پایدارتر می‌سازد. همچنین با حذف روش‌های غیرایمن و نامطمئنِ نگهداری رول، ایمنی و ارگونومی کار اپراتور بهتر می‌شود و محیط کار تمیزتر و منظم‌تر می‌ماند."
         },
-        "tools": ["SolidWorks", "Aluminium profile", "Idler rollers"],
+        "tools": [
+          "SolidWorks",
+          "Aluminium profile",
+          "Idler rollers"
+        ],
         "specs": [
-          { "label": { "en": "Structure", "fa": "سازه" },     "value": { "en": "Aluminium profile, mobile", "fa": "پروفیل آلومینیوم، چرخ‌دار" } },
-          { "label": { "en": "Rollers",   "fa": "رولرها" },   "value": { "en": "2 sets, steel & aluminium", "fa": "۲ مجموعه، آهن و آلومینیوم" } },
-          { "label": { "en": "Benefit",   "fa": "دستاورد" },  "value": { "en": "Friction-free roll rotation", "fa": "چرخش بدون اصطکاک رول" } }
+          {
+            "label": {
+              "en": "Structure",
+              "fa": "سازه"
+            },
+            "value": {
+              "en": "Aluminium profile, mobile",
+              "fa": "پروفیل آلومینیوم، چرخ‌دار"
+            }
+          },
+          {
+            "label": {
+              "en": "Rollers",
+              "fa": "رولرها"
+            },
+            "value": {
+              "en": "2 sets, steel & aluminium",
+              "fa": "۲ مجموعه، آهن و آلومینیوم"
+            }
+          },
+          {
+            "label": {
+              "en": "Benefit",
+              "fa": "دستاورد"
+            },
+            "value": {
+              "en": "Friction-free roll rotation",
+              "fa": "چرخش بدون اصطکاک رول"
+            }
+          }
         ],
         "cover": "assets/images/airbag-stand-render.jpg",
         "gallery": [
-          { "image": "assets/images/airbag-stand-render.jpg", "caption": { "en": "CAD model with the roll loaded",             "fa": "مدل سه‌بعدی همراه با رول" } },
-          { "image": "assets/images/airbag-stand-built.jpg",  "caption": { "en": "The built stand showing the roller blocks", "fa": "استند ساخته‌شده و بلوک‌های رولر" } }
+          {
+            "image": "assets/images/airbag-stand-render.jpg",
+            "caption": {
+              "en": "CAD model with the roll loaded",
+              "fa": "مدل سه‌بعدی همراه با رول"
+            }
+          },
+          {
+            "image": "assets/images/airbag-stand-built.jpg",
+            "caption": {
+              "en": "The built stand showing the roller blocks",
+              "fa": "استند ساخته‌شده و بلوک‌های رولر"
+            }
+          }
         ]
       },
       {
@@ -442,8 +1017,14 @@
           "en": "Static Load Test Fixture — Rear Seat Back",
           "fa": "فیکسچر تست پشتی صندلی عقب"
         },
-        "category": { "en": "Inspection & Gauging", "fa": "کنترل و بازرسی" },
-        "client": { "en": "Internal — for standards certification", "fa": "داخلی — جهت اخذ گواهی استاندارد" },
+        "category": {
+          "en": "Inspection & Gauging",
+          "fa": "کنترل و بازرسی"
+        },
+        "client": {
+          "en": "Internal — for standards certification",
+          "fa": "داخلی — جهت اخذ گواهی استاندارد"
+        },
         "summary": {
           "en": "A welded test rig that reproduces the real in-vehicle mounting conditions of a rear seat back so static load testing can be certified.",
           "fa": "فیکسچر تست جوشی که شرایط واقعی نصب پشتی صندلی عقب روی خودرو را بازسازی می‌کند تا تست فشار استاتیکی قابل استناد باشد."
@@ -464,15 +1045,51 @@
           "en": "The fixture was built specifically to obtain a standards certificate, and it is the rig the certification testing is carried out on.",
           "fa": "این فیکسچر جهت کسب گواهی استاندارد ساخته شده است و تست‌های مربوط به صدور گواهی روی آن انجام می‌شود."
         },
-        "tools": ["SolidWorks", "Welded steel structure"],
+        "tools": [
+          "SolidWorks",
+          "Welded steel structure"
+        ],
         "specs": [
-          { "label": { "en": "Test",      "fa": "نوع تست" },   "value": { "en": "Static load / pressure", "fa": "بار و فشار استاتیکی" } },
-          { "label": { "en": "Structure", "fa": "سازه" },      "value": { "en": "Welded steel frame",     "fa": "شاسی فولادی جوشی" } },
-          { "label": { "en": "Purpose",   "fa": "هدف" },       "value": { "en": "Standards certification","fa": "اخذ گواهی استاندارد" } }
+          {
+            "label": {
+              "en": "Test",
+              "fa": "نوع تست"
+            },
+            "value": {
+              "en": "Static load / pressure",
+              "fa": "بار و فشار استاتیکی"
+            }
+          },
+          {
+            "label": {
+              "en": "Structure",
+              "fa": "سازه"
+            },
+            "value": {
+              "en": "Welded steel frame",
+              "fa": "شاسی فولادی جوشی"
+            }
+          },
+          {
+            "label": {
+              "en": "Purpose",
+              "fa": "هدف"
+            },
+            "value": {
+              "en": "Standards certification",
+              "fa": "اخذ گواهی استاندارد"
+            }
+          }
         ],
         "cover": "assets/images/dignity-test-fixture.jpg",
         "gallery": [
-          { "image": "assets/images/dignity-test-fixture.jpg", "caption": { "en": "The welded test fixture after painting", "fa": "فیکسچر تست جوشی پس از رنگ‌آمیزی" } }
+          {
+            "image": "assets/images/dignity-test-fixture.jpg",
+            "caption": {
+              "en": "The welded test fixture after painting",
+              "fa": "فیکسچر تست جوشی پس از رنگ‌آمیزی"
+            }
+          }
         ]
       },
       {
@@ -484,8 +1101,14 @@
           "en": "Tube Cutting Saw — Clamp Jaw Redesign",
           "fa": "اصلاح دستگاه برش لوله"
         },
-        "category": { "en": "Machine Improvement", "fa": "بهبود ماشین‌آلات" },
-        "client": { "en": "Internal — Production", "fa": "داخلی — تولید" },
+        "category": {
+          "en": "Machine Improvement",
+          "fa": "بهبود ماشین‌آلات"
+        },
+        "client": {
+          "en": "Internal — Production",
+          "fa": "داخلی — تولید"
+        },
         "summary": {
           "en": "New clamp jaws designed around the real geometry of our tube bundles, turning a bought-in saw that could only hold square profile into one that cuts our stock cleanly.",
           "fa": "طراحی فک‌های جدید بر اساس هندسهٔ واقعی بندیل لوله‌ها؛ اره‌ای که فقط پروفیل مربعی را می‌گرفت، به دستگاهی تبدیل شد که لوله‌های ما را تمیز برش می‌دهد."
@@ -506,15 +1129,52 @@
           "en": "The tube-cutting problem was solved with minimal cost and minimal modification. Cutting time dropped sharply, and the tubes are now cut to defined lengths in the shortest possible time without deformation or distortion.",
           "fa": "با توجه به حل مشکل برش لوله‌ها با حداقل هزینه و تغییرات ممکن، زمان برش به‌شدت کاهش داشته و لوله‌ها بدون تغییر شکل و دفورمگی، بر اساس اندازه‌های مشخص در کمترین زمان ممکن برش داده می‌شوند."
         },
-        "tools": ["AutoCAD", "SolidWorks", "Machined steel"],
+        "tools": [
+          "AutoCAD",
+          "SolidWorks",
+          "Machined steel"
+        ],
         "specs": [
-          { "label": { "en": "Approach", "fa": "رویکرد" },  "value": { "en": "Reverse-engineered from bundle geometry", "fa": "مهندسی معکوس از هندسهٔ بندیل" } },
-          { "label": { "en": "Cost",     "fa": "هزینه" },   "value": { "en": "Minimal — jaws only",                     "fa": "حداقلی — فقط فک‌ها" } },
-          { "label": { "en": "Result",   "fa": "نتیجه" },   "value": { "en": "Sharply reduced cutting time",            "fa": "کاهش شدید زمان برش" } }
+          {
+            "label": {
+              "en": "Approach",
+              "fa": "رویکرد"
+            },
+            "value": {
+              "en": "Reverse-engineered from bundle geometry",
+              "fa": "مهندسی معکوس از هندسهٔ بندیل"
+            }
+          },
+          {
+            "label": {
+              "en": "Cost",
+              "fa": "هزینه"
+            },
+            "value": {
+              "en": "Minimal — jaws only",
+              "fa": "حداقلی — فقط فک‌ها"
+            }
+          },
+          {
+            "label": {
+              "en": "Result",
+              "fa": "نتیجه"
+            },
+            "value": {
+              "en": "Sharply reduced cutting time",
+              "fa": "کاهش شدید زمان برش"
+            }
+          }
         ],
         "cover": "assets/images/tube-saw-jaws.jpg",
         "gallery": [
-          { "image": "assets/images/tube-saw-jaws.jpg", "caption": { "en": "The new jaws holding a full polygonal tube bundle in the saw", "fa": "فک‌های جدید در حال نگه‌داشتن بندیل چندضلعی لوله در اره" } }
+          {
+            "image": "assets/images/tube-saw-jaws.jpg",
+            "caption": {
+              "en": "The new jaws holding a full polygonal tube bundle in the saw",
+              "fa": "فک‌های جدید در حال نگه‌داشتن بندیل چندضلعی لوله در اره"
+            }
+          }
         ]
       },
       {
@@ -526,8 +1186,14 @@
           "en": "Enclosed Laminating Workstation",
           "fa": "ایستگاه لمینه"
         },
-        "category": { "en": "Line Equipment", "fa": "تجهیزات خط" },
-        "client": { "en": "Internal — Production", "fa": "داخلی — تولید" },
+        "category": {
+          "en": "Line Equipment",
+          "fa": "تجهیزات خط"
+        },
+        "client": {
+          "en": "Internal — Production",
+          "fa": "داخلی — تولید"
+        },
         "summary": {
           "en": "A modular aluminium-profile cabin that gives the laminating operation stable environmental conditions and a properly ergonomic workstation.",
           "fa": "کابین مدولار از پروفیل آلومینیومی که شرایط محیطی پایدار و یک ایستگاه کاری ارگونومیک برای عملیات لمینه فراهم می‌کند."
@@ -548,15 +1214,52 @@
           "en": "The cabin makes the environmental conditions of the station more stable and reduces the effect of dust and contamination, so the appearance and uniformity of the laminated output improve. Enclosing the station makes cleaning and 5S control easier and stops contamination or consumables spreading into the surrounding area. Beyond that, defining an orderly and safe working space reduces operator error and the time lost to repeated cleaning, rework and quality stoppages.",
           "fa": "این کابین باعث پایدارتر شدن شرایط محیطی ایستگاه و کاهش اثر گردوغبار و آلودگی می‌شود و در نتیجه کیفیت ظاهری و یکنواختی خروجی لمینه بهبود پیدا می‌کند. محدوده‌دار شدن ایستگاه، نظافت و کنترل 5S را ساده‌تر می‌کند و از پخش آلودگی یا مواد مصرفی به اطراف جلوگیری می‌شود. علاوه بر این، با تعریف یک فضای کاری منظم و ایمن، خطاهای اپراتوری کمتر شده و زمان‌های اتلافی ناشی از تمیزکاری‌های مکرر، دوباره‌کاری یا توقف‌های کیفی کاهش می‌یابد."
         },
-        "tools": ["SolidWorks", "Aluminium profile", "Sheet metal"],
+        "tools": [
+          "SolidWorks",
+          "Aluminium profile",
+          "Sheet metal"
+        ],
         "specs": [
-          { "label": { "en": "Structure", "fa": "سازه" },      "value": { "en": "Modular aluminium profile", "fa": "پروفیل آلومینیوم مدولار" } },
-          { "label": { "en": "Provides", "fa": "امکانات" },    "value": { "en": "Lighting, tool holders, ventilation", "fa": "روشنایی، نگهدارندهٔ ابزار، تهویه" } },
-          { "label": { "en": "Supports", "fa": "پشتیبانی از" },"value": { "en": "5S and dust control", "fa": "کنترل 5S و گردوغبار" } }
+          {
+            "label": {
+              "en": "Structure",
+              "fa": "سازه"
+            },
+            "value": {
+              "en": "Modular aluminium profile",
+              "fa": "پروفیل آلومینیوم مدولار"
+            }
+          },
+          {
+            "label": {
+              "en": "Provides",
+              "fa": "امکانات"
+            },
+            "value": {
+              "en": "Lighting, tool holders, ventilation",
+              "fa": "روشنایی، نگهدارندهٔ ابزار، تهویه"
+            }
+          },
+          {
+            "label": {
+              "en": "Supports",
+              "fa": "پشتیبانی از"
+            },
+            "value": {
+              "en": "5S and dust control",
+              "fa": "کنترل 5S و گردوغبار"
+            }
+          }
         ],
         "cover": "assets/images/laminating-station-render.jpg",
         "gallery": [
-          { "image": "assets/images/laminating-station-render.jpg", "caption": { "en": "CAD model of the enclosed station", "fa": "مدل سه‌بعدی ایستگاه محصور" } }
+          {
+            "image": "assets/images/laminating-station-render.jpg",
+            "caption": {
+              "en": "CAD model of the enclosed station",
+              "fa": "مدل سه‌بعدی ایستگاه محصور"
+            }
+          }
         ]
       },
       {
@@ -568,8 +1271,14 @@
           "en": "In-House Line Equipment Programme — 25 Designs, 290+ Units",
           "fa": "برنامهٔ ساخت تجهیزات داخلی خط — ۲۵ طرح، بیش از ۲۹۰ دستگاه"
         },
-        "category": { "en": "Line Equipment", "fa": "تجهیزات خط" },
-        "client": { "en": "Internal — multiple production halls", "fa": "داخلی — چند سالن تولید" },
+        "category": {
+          "en": "Line Equipment",
+          "fa": "تجهیزات خط"
+        },
+        "client": {
+          "en": "Internal — multiple production halls",
+          "fa": "داخلی — چند سالن تولید"
+        },
         "summary": {
           "en": "A rolling programme of workbenches, trolleys, stands, pallets and racks designed in-house and fabricated in volume for six production areas.",
           "fa": "برنامه‌ای پیوسته از میزهای کار، ترولی‌ها، استندها، پالت‌ها و رک‌ها که به‌صورت داخلی طراحی و برای شش ناحیهٔ تولیدی به‌صورت انبوه ساخته شدند."
@@ -590,33 +1299,97 @@
           "en": "More than 290 units were fabricated and put into service across the welding and frame hall, the assembly hall, the foam hall, the sewing hall, the canteen and the engineering workshop. Standardising on a small number of well-designed items made the equipment cheaper to build, easier to repair and consistent from station to station.",
           "fa": "بیش از ۲۹۰ دستگاه ساخته و در سالن جوشکاری و فریم، سالن مونتاژ، سالن فوم، سالن خیاطی، سالن غذاخوری و کارگاه واحد مهندسی به بهره‌برداری رسید. استاندارد شدن روی تعداد محدودی طرح خوب، ساخت را ارزان‌تر، تعمیر را ساده‌تر و تجهیزات را از ایستگاهی به ایستگاه دیگر یکدست کرد."
         },
-        "tools": ["SolidWorks", "AutoCAD", "Aluminium profile", "Welded steel"],
+        "tools": [
+          "SolidWorks",
+          "AutoCAD",
+          "Aluminium profile",
+          "Welded steel"
+        ],
         "specs": [
-          { "label": { "en": "Designs",   "fa": "تعداد طرح" },   "value": { "en": "25 distinct items",  "fa": "۲۵ قلم مجزا" } },
-          { "label": { "en": "Units",     "fa": "تعداد ساخت" },  "value": { "en": "290+ fabricated",    "fa": "بیش از ۲۹۰ دستگاه" } },
-          { "label": { "en": "Deployed",  "fa": "محل استقرار" }, "value": { "en": "6 production areas", "fa": "۶ ناحیهٔ تولیدی" } },
-          { "label": { "en": "Materials", "fa": "متریال" },      "value": { "en": "Aluminium profile & welded steel", "fa": "پروفیل آلومینیوم و فولاد جوشی" } }
+          {
+            "label": {
+              "en": "Designs",
+              "fa": "تعداد طرح"
+            },
+            "value": {
+              "en": "25 distinct items",
+              "fa": "۲۵ قلم مجزا"
+            }
+          },
+          {
+            "label": {
+              "en": "Units",
+              "fa": "تعداد ساخت"
+            },
+            "value": {
+              "en": "290+ fabricated",
+              "fa": "بیش از ۲۹۰ دستگاه"
+            }
+          },
+          {
+            "label": {
+              "en": "Deployed",
+              "fa": "محل استقرار"
+            },
+            "value": {
+              "en": "6 production areas",
+              "fa": "۶ ناحیهٔ تولیدی"
+            }
+          },
+          {
+            "label": {
+              "en": "Materials",
+              "fa": "متریال"
+            },
+            "value": {
+              "en": "Aluminium profile & welded steel",
+              "fa": "پروفیل آلومینیوم و فولاد جوشی"
+            }
+          }
         ],
         "cover": "assets/images/assembly-workbench-render.jpg",
         "gallery": [
-          { "image": "assets/images/assembly-workbench-render.jpg", "caption": { "en": "Standard modular assembly workbench", "fa": "میز کار مونتاژ مدولار استاندارد" } }
+          {
+            "image": "assets/images/assembly-workbench-render.jpg",
+            "caption": {
+              "en": "Standard modular assembly workbench",
+              "fa": "میز کار مونتاژ مدولار استاندارد"
+            }
+          }
         ]
       }
     ]
   },
-
   "experience": {
     "sectionNumber": "04",
-    "sectionTitle": { "en": "Experience", "fa": "سوابق کاری" },
-    "heading": { "en": "Career timeline.", "fa": "مسیر حرفه‌ای." },
+    "sectionTitle": {
+      "en": "Experience",
+      "fa": "سوابق کاری"
+    },
+    "heading": {
+      "en": "Career timeline.",
+      "fa": "مسیر حرفه‌ای."
+    },
     "items": [
       {
         "enabled": true,
         "current": true,
-        "role": { "en": "Mechanical Engineer — Production Technology", "fa": "کارشناس مکانیک — تکنولوژی تولید" },
-        "company": { "en": "MAAD ARIA VISTA Co.", "fa": "شرکت ماد آریا ویستا" },
-        "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
-        "period": { "en": "July 2025 — Present", "fa": "تیر ۱۴۰۴ — تاکنون" },
+        "role": {
+          "en": "Mechanical Engineer — Production Technology",
+          "fa": "کارشناس مکانیک — تکنولوژی تولید"
+        },
+        "company": {
+          "en": "MAAD ARIA VISTA Co.",
+          "fa": "شرکت ماد آریا ویستا"
+        },
+        "location": {
+          "en": "Tehran, Iran",
+          "fa": "تهران، ایران"
+        },
+        "period": {
+          "en": "July 2025 — Present",
+          "fa": "تیر ۱۴۰۴ — تاکنون"
+        },
         "points": [
           {
             "en": "Design pneumatic assembly machines, control and test fixtures, and line equipment for automotive seating manufacture — from concept through to commissioning on the floor.",
@@ -639,10 +1412,22 @@
       {
         "enabled": true,
         "current": false,
-        "role": { "en": "Mechanical Engineer", "fa": "مهندس مکانیک" },
-        "company": { "en": "Talash B.S.R.", "fa": "تلاش B.S.R" },
-        "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
-        "period": { "en": "November 2024 — July 2025", "fa": "آبان ۱۴۰۳ — تیر ۱۴۰۴" },
+        "role": {
+          "en": "Mechanical Engineer",
+          "fa": "مهندس مکانیک"
+        },
+        "company": {
+          "en": "Talash B.S.R.",
+          "fa": "تلاش B.S.R"
+        },
+        "location": {
+          "en": "Tehran, Iran",
+          "fa": "تهران، ایران"
+        },
+        "period": {
+          "en": "November 2024 — July 2025",
+          "fa": "آبان ۱۴۰۳ — تیر ۱۴۰۴"
+        },
         "points": [
           {
             "en": "ADD YOUR RESPONSIBILITIES HERE — this job is on your CV but the CV does not describe what you did. Two or three lines, starting with a verb.",
@@ -653,10 +1438,22 @@
       {
         "enabled": true,
         "current": false,
-        "role": { "en": "Research Assistant", "fa": "دستیار پژوهشی" },
-        "company": { "en": "ARAS Robotics Laboratory", "fa": "آزمایشگاه رباتیک آرَس" },
-        "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
-        "period": { "en": "September 2021 — November 2024", "fa": "شهریور ۱۴۰۰ — آبان ۱۴۰۳" },
+        "role": {
+          "en": "Research Assistant",
+          "fa": "دستیار پژوهشی"
+        },
+        "company": {
+          "en": "ARAS Robotics Laboratory",
+          "fa": "آزمایشگاه رباتیک آرَس"
+        },
+        "location": {
+          "en": "Tehran, Iran",
+          "fa": "تهران، ایران"
+        },
+        "period": {
+          "en": "September 2021 — November 2024",
+          "fa": "شهریور ۱۴۰۰ — آبان ۱۴۰۳"
+        },
         "points": [
           {
             "en": "Designed and modelled mechanical components in SolidWorks, then controlled and optimised a continuum robot for minimally invasive surgical applications.",
@@ -675,10 +1472,22 @@
       {
         "enabled": false,
         "current": false,
-        "role": { "en": "Computer Hardware Technician", "fa": "تعمیرکار قطعات کامپیوتر" },
-        "company": { "en": "Pasargad", "fa": "پاسارگاد" },
-        "location": { "en": "Tehran, Iran", "fa": "تهران، ایران" },
-        "period": { "en": "June 2015 — August 2021", "fa": "خرداد ۱۳۹۴ — مرداد ۱۴۰۰" },
+        "role": {
+          "en": "Computer Hardware Technician",
+          "fa": "تعمیرکار قطعات کامپیوتر"
+        },
+        "company": {
+          "en": "Pasargad",
+          "fa": "پاسارگاد"
+        },
+        "location": {
+          "en": "Tehran, Iran",
+          "fa": "تهران، ایران"
+        },
+        "period": {
+          "en": "June 2015 — August 2021",
+          "fa": "خرداد ۱۳۹۴ — مرداد ۱۴۰۰"
+        },
         "points": [
           {
             "en": "This entry is HIDDEN by default because it is not mechanical engineering work. Set 'Show this job' to on if you would rather display your full work history.",
@@ -686,21 +1495,45 @@
           }
         ]
       }
-    ]
+    ],
+    "currentLabel": {
+      "en": "Current",
+      "fa": "فعلی"
+    }
   },
-
   "education": {
     "sectionNumber": "05",
-    "sectionTitle": { "en": "Education & Training", "fa": "تحصیلات و آموزش" },
-    "heading": { "en": "Training and credentials.", "fa": "آموزش و مدارک." },
-    "educationTitle": { "en": "Education", "fa": "تحصیلات" },
-    "certificationsTitle": { "en": "Courses & Publications", "fa": "دوره‌ها و انتشارات" },
+    "sectionTitle": {
+      "en": "Education & Training",
+      "fa": "تحصیلات و آموزش"
+    },
+    "heading": {
+      "en": "Training and credentials.",
+      "fa": "آموزش و مدارک."
+    },
+    "educationTitle": {
+      "en": "Education",
+      "fa": "تحصیلات"
+    },
+    "certificationsTitle": {
+      "en": "Courses & Publications",
+      "fa": "دوره‌ها و انتشارات"
+    },
     "degrees": [
       {
         "enabled": true,
-        "degree": { "en": "M.Sc. Mechatronics Engineering", "fa": "کارشناسی ارشد مهندسی مکاترونیک" },
-        "school": { "en": "K. N. Toosi University of Technology", "fa": "دانشگاه صنعتی خواجه نصیرالدین طوسی" },
-        "period": { "en": "2021 — 2024", "fa": "۱۴۰۰ — ۱۴۰۳" },
+        "degree": {
+          "en": "M.Sc. Mechatronics Engineering",
+          "fa": "کارشناسی ارشد مهندسی مکاترونیک"
+        },
+        "school": {
+          "en": "K. N. Toosi University of Technology",
+          "fa": "دانشگاه صنعتی خواجه نصیرالدین طوسی"
+        },
+        "period": {
+          "en": "2021 — 2024",
+          "fa": "۱۴۰۰ — ۱۴۰۳"
+        },
         "note": {
           "en": "Research at the ARAS Robotics Laboratory: mechanism modelling, motion path planning and intelligent control of cable-driven and continuum robots.",
           "fa": "پژوهش در آزمایشگاه رباتیک آرَس: مدل‌سازی مکانیزم، برنامه‌ریزی مسیر حرکت و کنترل هوشمند ربات‌های کابلی و پیوسته."
@@ -708,10 +1541,22 @@
       },
       {
         "enabled": true,
-        "degree": { "en": "B.Sc. Mechanical Engineering", "fa": "کارشناسی مهندسی مکانیک" },
-        "school": { "en": "K. N. Toosi University of Technology", "fa": "دانشگاه صنعتی خواجه نصیرالدین طوسی" },
-        "period": { "en": "2014 — 2019", "fa": "۱۳۹۳ — ۱۳۹۸" },
-        "note": { "en": "", "fa": "" }
+        "degree": {
+          "en": "B.Sc. Mechanical Engineering",
+          "fa": "کارشناسی مهندسی مکانیک"
+        },
+        "school": {
+          "en": "K. N. Toosi University of Technology",
+          "fa": "دانشگاه صنعتی خواجه نصیرالدین طوسی"
+        },
+        "period": {
+          "en": "2014 — 2019",
+          "fa": "۱۳۹۳ — ۱۳۹۸"
+        },
+        "note": {
+          "en": "",
+          "fa": ""
+        }
       }
     ],
     "certifications": [
@@ -722,29 +1567,46 @@
           "en": "Paper — Classifying Human Spatial Navigation Anxiety Using Electrooculography Signals and Machine Learning Techniques",
           "fa": "مقاله — طبقه‌بندی اضطراب جهت‌یابی فضایی انسان با استفاده از سیگنال‌های الکترواکولوگرافی و روش‌های یادگیری ماشین"
         },
-        "issuer": { "en": "Published research", "fa": "پژوهش منتشرشده" },
+        "issuer": {
+          "en": "Published research",
+          "fa": "پژوهش منتشرشده"
+        },
         "link": ""
       },
       {
         "enabled": true,
         "year": "2021",
-        "title": { "en": "MATLAB Programming — 44 hours", "fa": "برنامه‌نویسی MATLAB — ۴۴ ساعت" },
-        "issuer": { "en": "Maktabkhooneh", "fa": "مکتب‌خونه" },
+        "title": {
+          "en": "MATLAB Programming — 44 hours",
+          "fa": "برنامه‌نویسی MATLAB — ۴۴ ساعت"
+        },
+        "issuer": {
+          "en": "Maktabkhooneh",
+          "fa": "مکتب‌خونه"
+        },
         "link": ""
       },
       {
         "enabled": true,
         "year": "2019",
-        "title": { "en": "SolidWorks — 30 hours", "fa": "سالیدورکس — ۳۰ ساعت" },
-        "issuer": { "en": "Maktabkhooneh", "fa": "مکتب‌خونه" },
+        "title": {
+          "en": "SolidWorks — 30 hours",
+          "fa": "سالیدورکس — ۳۰ ساعت"
+        },
+        "issuer": {
+          "en": "Maktabkhooneh",
+          "fa": "مکتب‌خونه"
+        },
         "link": ""
       }
     ]
   },
-
   "contact": {
     "sectionNumber": "06",
-    "sectionTitle": { "en": "Contact", "fa": "تماس" },
+    "sectionTitle": {
+      "en": "Contact",
+      "fa": "تماس"
+    },
     "heading": {
       "en": "Have a production problem worth solving?",
       "fa": "مسئله‌ای در تولید دارید که ارزش حل کردن دارد؟"
@@ -757,36 +1619,120 @@
     "formProvider": "netlify",
     "formspreeEndpoint": "",
     "formLabels": {
-      "name":    { "en": "Your name",    "fa": "نام شما" },
-      "email":   { "en": "Your email",   "fa": "ایمیل شما" },
-      "company": { "en": "Company",      "fa": "شرکت" },
-      "message": { "en": "Your message", "fa": "پیام شما" },
-      "submit":  { "en": "Send message", "fa": "ارسال پیام" },
-      "sending": { "en": "Sending…",     "fa": "در حال ارسال…" },
-      "success": { "en": "Thank you — your message has been sent. I will reply shortly.", "fa": "سپاسگزارم — پیام شما ارسال شد. به‌زودی پاسخ می‌دهم." },
-      "error":   { "en": "Something went wrong. Please email me directly instead.",       "fa": "مشکلی پیش آمد. لطفاً مستقیماً ایمیل بزنید." }
+      "name": {
+        "en": "Your name",
+        "fa": "نام شما"
+      },
+      "email": {
+        "en": "Your email",
+        "fa": "ایمیل شما"
+      },
+      "company": {
+        "en": "Company",
+        "fa": "شرکت"
+      },
+      "message": {
+        "en": "Your message",
+        "fa": "پیام شما"
+      },
+      "submit": {
+        "en": "Send message",
+        "fa": "ارسال پیام"
+      },
+      "sending": {
+        "en": "Sending…",
+        "fa": "در حال ارسال…"
+      },
+      "success": {
+        "en": "Thank you — your message has been sent. I will reply shortly.",
+        "fa": "سپاسگزارم — پیام شما ارسال شد. به‌زودی پاسخ می‌دهم."
+      },
+      "error": {
+        "en": "Something went wrong. Please email me directly instead.",
+        "fa": "مشکلی پیش آمد. لطفاً مستقیماً ایمیل بزنید."
+      }
     },
     "details": [
-      { "enabled": true, "type": "email",    "label": { "en": "Email",    "fa": "ایمیل" },  "value": "saeedmoucavi@gmail.com", "link": "mailto:saeedmoucavi@gmail.com" },
-      { "enabled": true, "type": "phone",    "label": { "en": "Phone",    "fa": "تلفن" },   "value": "0912 205 3808",          "link": "tel:+989122053808" },
-      { "enabled": true, "type": "location", "label": { "en": "Location", "fa": "موقعیت" }, "value": "Tehran, Iran",           "link": "" }
+      {
+        "enabled": true,
+        "type": "email",
+        "label": {
+          "en": "Email",
+          "fa": "ایمیل"
+        },
+        "value": "saeedmoucavi@gmail.com",
+        "link": "mailto:saeedmoucavi@gmail.com"
+      },
+      {
+        "enabled": true,
+        "type": "phone",
+        "label": {
+          "en": "Phone",
+          "fa": "تلفن"
+        },
+        "value": "0912 205 3808",
+        "link": "tel:+989122053808"
+      },
+      {
+        "enabled": true,
+        "type": "location",
+        "label": {
+          "en": "Location",
+          "fa": "موقعیت"
+        },
+        "value": "Tehran, Iran",
+        "link": ""
+      }
     ],
     "socials": [
-      { "enabled": true,  "icon": "linkedin",  "label": "LinkedIn",  "url": "https://www.linkedin.com/in/YOUR-PROFILE" },
-      { "enabled": true,  "icon": "whatsapp",  "label": "WhatsApp",  "url": "https://wa.me/989122053808" },
-      { "enabled": false, "icon": "telegram",  "label": "Telegram",  "url": "https://t.me/YOUR-USERNAME" },
-      { "enabled": false, "icon": "instagram", "label": "Instagram", "url": "https://instagram.com/YOUR-USERNAME" },
-      { "enabled": false, "icon": "grabcad",   "label": "GrabCAD",   "url": "https://grabcad.com/YOUR-PROFILE" }
+      {
+        "enabled": true,
+        "icon": "linkedin",
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/YOUR-PROFILE"
+      },
+      {
+        "enabled": true,
+        "icon": "whatsapp",
+        "label": "WhatsApp",
+        "url": "https://wa.me/989122053808"
+      },
+      {
+        "enabled": false,
+        "icon": "telegram",
+        "label": "Telegram",
+        "url": "https://t.me/YOUR-USERNAME"
+      },
+      {
+        "enabled": false,
+        "icon": "instagram",
+        "label": "Instagram",
+        "url": "https://instagram.com/YOUR-USERNAME"
+      },
+      {
+        "enabled": false,
+        "icon": "grabcad",
+        "label": "GrabCAD",
+        "url": "https://grabcad.com/YOUR-PROFILE"
+      }
     ]
   },
-
   "footer": {
     "tagline": {
       "en": "Production fixtures, assembly machines and line equipment.",
       "fa": "فیکسچرهای تولید، دستگاه‌های مونتاژ و تجهیزات خط."
     },
-    "copyrightName": { "en": "Saeed Mousavi", "fa": "سعید موسوی" },
-    "note": { "en": "All rights reserved.", "fa": "تمامی حقوق محفوظ است." },
-    "backToTop": { "en": "Back to top", "fa": "بازگشت به بالا" }
+    "copyrightName": {
+      "en": "Saeed Mousavi",
+      "fa": "سعید موسوی"
+    },
+    "note": {
+      "en": "All rights reserved.",
+      "fa": "تمامی حقوق محفوظ است."
+    },
+    "backToTop": {
+      "en": "Back to top",
+      "fa": "بازگشت به بالا"
+    }
   }
 }
