@@ -6,7 +6,7 @@
     "راهنمای کامل: فایل راهنمای-ویرایش.md"
   ],
   "site": {
-    "brandInitials": "SM",
+    "brandInitials": "Saeed",
     "defaultLanguage": "fa",
     "showLanguageToggle": true,
     "pageTitle": {
@@ -32,8 +32,8 @@
   "theme": {
     "defaultMode": "light",
     "showModeToggle": true,
-    "accentLight": "#D9480F",
-    "accentDark": "#FF7A3D",
+    "accentLight": "#14171C",
+    "accentDark": "#C2185B",
     "showBlueprintGrid": true,
     "enableAnimations": true
   },
